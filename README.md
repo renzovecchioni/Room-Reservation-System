@@ -19,12 +19,12 @@ O usuario deve encontrar o diretorio referente ao código e excecutar no termina
 ´´´bash
 g++ main.cpp ReservationSystem.cpp ReservationRequest.cpp -o programa
 ´´´
-## instruções de execução
+## Instruções de execução
 Basta que o usuário rode no terminal:
 ´´´bash
 ./programa
 ´´´
-## uma breve explicação de como os dados estão organizados internamente no sistema.
+## Uma breve explicação de como os dados estão organizados internamente no sistema.
 ### ReservationRequest
 Os dados sao encapsulados e acessados por meio de getters
 ### ReservationSystem
