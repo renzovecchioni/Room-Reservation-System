@@ -4,51 +4,47 @@
 
 using namespace std;
 
-#include <iostream>
-#include "ReservationSystem.hpp"
-#include "ReservationRequest.hpp"
-
 int main() {
-    cout<<"criação do sistema\n"<<endl;
+    cout<<"CRIAÇÃO DO SISTEMA\n"<<endl;
     int capacities[2] = {30, 50};
     ReservationSystem system(2, capacities);
 
-    cout<<"\nreservas bem-sucedidas\n"<<endl;
+    cout<<"\nRESERVAS BEM-SUCEDIDAS\n"<<endl;
     ReservationRequest r1("Calculo", "segunda", 8, 10, 25);
     ReservationRequest r2("Fisica", "segunda", 10, 12, 20);
 
     if (system.reserve(r1))
-        std::cout << "Reserva Calculo\n";
+        cout << "Reserva Calculo\n";
     else
-        std::cout << "Falha Calculo\n";
+        cout << "Falha Calculo\n";
 
     if (system.reserve(r2))
-        std::cout << "Reserva Fisica\n";
+        cout << "Reserva Fisica\n";
     else
-        std::cout << "Falha Fisica\n";
+        cout << "Falha Fisica\n";
 
-    cout<<"\ntentativa de reserva sem disponibilidade\n"<<endl;
+    cout<<"\nTENTATIVA DE RESERVA SEM DISPONIBILIDADE\n"<<endl;
     ReservationRequest r3("Quimica", "segunda", 9, 11, 20);
 
     if (system.reserve(r3))
-        std::cout << "Reserva Quimica -> Valor esperado: Falha\n";
+        cout << "Reserva Quimica -> Valor esperado: Falha\n";
     else
-        std::cout << "Falha Quimica\n";
+        cout << "Falha Quimica\n";
 
     ReservationRequest r4("Biologia", "terca", 8, 10, 60);
     if (system.reserve(r4))
-        std::cout << "Reserva Biologia OK -> Valor esperado: Falha\n";
+        cout << "Reserva Biologia OK -> Valor esperado: Falha\n";
     else
-        std::cout << "Falha Biologia\n";
+        cout << "Falha Biologia\n";
     system.printSchedule();
 
-    cout<<"\ncancelamentos\n"<<endl;
+    cout<<"\nCANCELAMENTOS\n"<<endl;
     if (system.cancel("Calculo"))
-        std::cout << "Cancelamento Calculo OK\n";
+        cout << "Cancelamento Calculo OK\n";
     else
-        std::cout << "Falha ao cancelar Calculo\n";
+        cout << "Falha ao cancelar Calculo\n";
 
-    cout<<"\nexibição da grade\n"<<endl;
+    cout<<"\nEXIBIÇÃO DA GRADE\n"<<endl;
 
     system.printSchedule();
     return 0;

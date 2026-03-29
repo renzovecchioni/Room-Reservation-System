@@ -17,10 +17,10 @@ int ReservationRequest::getStartHour(){
 int ReservationRequest::getEndHour(){
     return this->end_hour;
 }
-std::string ReservationRequest::getCourseName(){
+string ReservationRequest::getCourseName(){
     return this->course_name;
 }
-std::string ReservationRequest::getWeekday(){
+string ReservationRequest::getWeekday(){
     return this->weekday;
 }
 int ReservationRequest::getStudentCount(){

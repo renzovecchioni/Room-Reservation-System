@@ -23,7 +23,7 @@ bool ReservationSystem::reserve(ReservationRequest request){
             
             for (int j=0;j<this->d.count;j++){
                 if (d.sala_id[j] == sala_id && d.weekday[j] == request.getWeekday() && 
-                    !(request.getEndHour() <= d.start_hour[j] || request.getStartHour() >= d.end_hour[j])){
+                    !(request.getStartHour() > d.end_hour[j])){
                     conflito = true;
                     break;
                 }
