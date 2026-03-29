@@ -1,6 +1,9 @@
 # Trabalho 1: Room-Reservation-System
 
 Neste trabalho, os alunos devem implementar um sistema simples para gerenciar a alocação de disciplinas em salas de aula durante uma semana.
+
+Clique nesse link para ter mais detalhes acerca da estrutura de dados ou do custo operacional [ver relatorio](documentos/Ed_trabalho1.pdf)
+
 ## Descrição do Projeto
 
 Este projeto implementa um sistema de gerenciamento de reservas de salas, dividido em duas classes, uma de requisição de sala onde informava dados como:
