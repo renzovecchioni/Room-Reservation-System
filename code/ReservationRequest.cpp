@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "ReservationRequest.hpp"
 using namespace std;
 
 class ReservationRequest {
